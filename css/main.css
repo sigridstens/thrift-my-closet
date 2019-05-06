@@ -25,6 +25,7 @@ img {
 /*Global Styles*/
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 .fontAwesome {
@@ -35,6 +36,46 @@ body {
     display: none;
 }
 
+/*Header & Main Nav Styles*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4em 4em 0 4em;
+    transform: translateY(1.5em);
+}
+
+h1 {
+    margin-bottom: 0;
+    color: #db6b28;
+    font-family: 'Radley', serif;
+    font-size: 5em;
+    letter-spacing: .02em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 1.15em;
+}
+
+nav li {
+    padding: 0 2em;
+}
+
+/*Main Section Styles*/
+main {
+    background-color: #f0cc5e;
+    padding: 2em 4em;
+
+}
+
+/*Side Navigation Styles*/
+
+
+
+
+/*Main Gallery Styles*/
 figure {
     width: 20%;
 }
@@ -42,3 +83,8 @@ figure {
 figcaption.product-caption {
     display: none;
 }
+
+
+/*Cart Styles*/
+
+
