@@ -7,67 +7,78 @@
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
     </head>
 
-    <body id="app" v-cloak>
-        <header>
-            <h1>Thrift My Closet</h1>
-            <nav>
-                <ul>
-                    <li>Why Thrift</li>
-                    <li>
-                        <i class="fas fa-shopping-cart"></i>
-                        (0)
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <body>
+        <div id="app" v-cloak>
+            <header>
+                <h1>Thrift My Closet</h1>
+                <nav>
+                    <ul>
+                        <li>Why Thrift</li>
+                        <li>
+                            <i class="fas fa-shopping-cart"></i>
+                            (0)
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-        <main>
-            <section class="search-bar">
-                <form>
-                    <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="&#xf002; Search..."/>
-                </form>
-            </section>
+            <main>
+                <section class="search-bar">
+                    <form>
+                        <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="&#xf002; Search..."/>
+                    </form>
+                </section>
 
-            <aside class="sidebar">
-                <ul>
-                    <li> Tops <span class="sub-nav-icon">-</span>
-                        <ul class="subnav">
-                            <li>Tees & Tanks</li>
-                            <li>Tops & Shirts</li>
-                            <li>Sweaters</li>
-                            <li>Sweatshirts</li>
-                        </ul>
-                    </li>
-                    <li> Bottoms <span class="sub-nav-icon">-</span>
-                        <ul class="subnav">
-                            <li>Jeans</li>
-                            <li>Pants</li>
-                            <li>Skirts</li>
-                            <li>Shorts</li>
-                        </ul>
-                    </li>
-                    <li> Accessories <span class="sub-nav-icon">-</span>
-                        <ul class="subnav">
-                            <li>Scarves & Bandanas</li>
-                            <li>Jewelry</li>
-                            <li>Hats</li>
-                            <li>Bags</li>
-                        </ul>
-                    </li>
-                    <li> Shoes <span class="sub-nav-icon">-</span>
-                        <ul class="subnav">
-                            <li>Sandals</li>
-                            <li>Flats & Slides</li>
-                            <li>Heels</li>
-                            <li>Sneakers</li>
-                            <li>Boots</li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
+                <aside class="sidebar">
+                    <ul>
+                        <li> Tops <span class="sub-nav-icon">-</span>
+                            <ul class="subnav">
+                                <li>Tees & Tanks</li>
+                                <li>Tops & Shirts</li>
+                                <li>Sweaters</li>
+                                <li>Sweatshirts</li>
+                            </ul>
+                        </li>
+                        <li> Bottoms <span class="sub-nav-icon">-</span>
+                            <ul class="subnav">
+                                <li>Jeans</li>
+                                <li>Pants</li>
+                                <li>Skirts</li>
+                                <li>Shorts</li>
+                            </ul>
+                        </li>
+                        <li> Accessories <span class="sub-nav-icon">-</span>
+                            <ul class="subnav">
+                                <li>Scarves & Bandanas</li>
+                                <li>Jewelry</li>
+                                <li>Hats</li>
+                                <li>Bags</li>
+                            </ul>
+                        </li>
+                        <li> Shoes <span class="sub-nav-icon">-</span>
+                            <ul class="subnav">
+                                <li>Sandals</li>
+                                <li>Flats & Slides</li>
+                                <li>Heels</li>
+                                <li>Sneakers</li>
+                                <li>Boots</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="gallery">
+                    <inventory-component is="inventory-component" v-for="product in inventory" v-bind:key="product.id" v-bind:product="product"></inventory-component>
+
+                    <figure class="gallery-tile">
+                        <img src="img/levishorts.jpg" alt="Levi shorts" >
+                        <figcaption class="product-caption">Levi Shorts</figcaption>
+                    </figure>
+                </section>
 
 
-        </main>
+            </main>
+        </div>
 
         <footer>
 

@@ -18,6 +18,10 @@ html {
     box-sizing: inherit;
 }
 
+img {
+    width: 100%;
+}
+
 /*Global Styles*/
 body {
     font-family: 'Open Sans', sans-serif;
@@ -28,5 +32,13 @@ body {
 }
 
 .subnav {
+    display: none;
+}
+
+figure {
+    width: 20%;
+}
+
+figcaption.product-caption {
     display: none;
 }
