@@ -10,10 +10,23 @@ dusty teal: #6799a4
 white: #fff
 */
 
+/* Box-sizing: Border-box source: https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Global Styles*/
 body {
     font-family: 'Open Sans', sans-serif;
 }
 
 .fontAwesome {
     font-family: 'Open Sans', 'FontAwesome', sans-serif;
+}
+
+.subnav {
+    display: none;
 }
