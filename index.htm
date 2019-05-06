@@ -69,11 +69,6 @@
 
                 <section class="gallery">
                     <inventory-component is="inventory-component" v-for="product in inventory" v-bind:key="product.id" v-bind:product="product"></inventory-component>
-
-                    <figure class="gallery-tile">
-                        <img src="img/levishorts.jpg" alt="Levi shorts" >
-                        <figcaption class="product-caption">Levi Shorts</figcaption>
-                    </figure>
                 </section>
 
 
@@ -81,7 +76,10 @@
         </div>
 
         <footer>
-
+            <ul>
+                <li>Why Thrift?</li>
+                <li>Contact</li>
+            </ul>
         </footer>
 
         <script src="vendors/axios.js"></script>
