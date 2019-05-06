@@ -1,16 +1,43 @@
 <html>
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Thrift My Closet</title>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Radley" rel="stylesheet">
-      <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Thrift My Closet</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Radley" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
 
-  </head>
+    <body id="app" v-cloak>
+        <header>
+            <h1>Thrift My Closet</h1>
+            <nav>
+                <ul>
+                    <li>Why Thrift</li>
+                    <li>
+                        <i class="fas fa-shopping-cart"></i>
+                        (0)
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-  <body>
+        <main>
+            <section class="search-bar">
+                <form>
+                    <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="&#xf002; Search..."/>
+                </form>
+            </section>
 
-      <script src="vendors/axios.js"></script>
-      <script src="vendors/vue.js"></script>
-      <script src="script.js"></script>
-  </body>
+
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script src="vendors/axios.js"></script>
+        <script src="vendors/vue.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
