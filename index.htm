@@ -22,65 +22,70 @@
                 </nav>
             </header>
 
-            <main>
-                <section class="search-bar">
-                    <form>
-                        <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="&#xf002; Search..."/>
-                    </form>
-                </section>
+            <section class="main-content">
+                <main>
+                    <aside class="sidebar">
+                        <ul>
+                            <li> Tops <span class="sub-nav-icon">-</span>
+                                <ul class="subnav">
+                                    <li>Tees & Tanks</li>
+                                    <li>Tops & Shirts</li>
+                                    <li>Sweaters</li>
+                                    <li>Sweatshirts</li>
+                                </ul>
+                            </li>
+                            <li> Bottoms <span class="sub-nav-icon">-</span>
+                                <ul class="subnav">
+                                    <li>Jeans</li>
+                                    <li>Pants</li>
+                                    <li>Skirts</li>
+                                    <li>Shorts</li>
+                                </ul>
+                            </li>
+                            <li> Accessories <span class="sub-nav-icon">-</span>
+                                <ul class="subnav">
+                                    <li>Scarves & Bandanas</li>
+                                    <li>Jewelry</li>
+                                    <li>Hats</li>
+                                    <li>Bags</li>
+                                </ul>
+                            </li>
+                            <li> Shoes <span class="sub-nav-icon">-</span>
+                                <ul class="subnav">
+                                    <li>Sandals</li>
+                                    <li>Flats & Slides</li>
+                                    <li>Heels</li>
+                                    <li>Sneakers</li>
+                                    <li>Boots</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </aside>
 
-                <aside class="sidebar">
+                    <section class="product-section">
+                        <section class="search-bar">
+                            <form>
+                                <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="&#xf002; Search..."/>
+                            </form>
+                        </section>
+
+                        <div class="gallery">
+                            <inventory-component is="inventory-component" v-for="product in inventory" v-bind:key="product.id" v-bind:product="product"></inventory-component>
+                        </div>
+                    </section>
+
+
+                </main>
+
+                <footer>
                     <ul>
-                        <li> Tops <span class="sub-nav-icon">-</span>
-                            <ul class="subnav">
-                                <li>Tees & Tanks</li>
-                                <li>Tops & Shirts</li>
-                                <li>Sweaters</li>
-                                <li>Sweatshirts</li>
-                            </ul>
-                        </li>
-                        <li> Bottoms <span class="sub-nav-icon">-</span>
-                            <ul class="subnav">
-                                <li>Jeans</li>
-                                <li>Pants</li>
-                                <li>Skirts</li>
-                                <li>Shorts</li>
-                            </ul>
-                        </li>
-                        <li> Accessories <span class="sub-nav-icon">-</span>
-                            <ul class="subnav">
-                                <li>Scarves & Bandanas</li>
-                                <li>Jewelry</li>
-                                <li>Hats</li>
-                                <li>Bags</li>
-                            </ul>
-                        </li>
-                        <li> Shoes <span class="sub-nav-icon">-</span>
-                            <ul class="subnav">
-                                <li>Sandals</li>
-                                <li>Flats & Slides</li>
-                                <li>Heels</li>
-                                <li>Sneakers</li>
-                                <li>Boots</li>
-                            </ul>
-                        </li>
+                        <li>Why Thrift?</li>
+                        <li>Contact</li>
                     </ul>
-                </aside>
+                </footer>
 
-                <section class="gallery">
-                    <inventory-component is="inventory-component" v-for="product in inventory" v-bind:key="product.id" v-bind:product="product"></inventory-component>
-                </section>
-
-
-            </main>
+            </section>
         </div>
-
-        <footer>
-            <ul>
-                <li>Why Thrift?</li>
-                <li>Contact</li>
-            </ul>
-        </footer>
 
         <script src="vendors/axios.js"></script>
         <script src="vendors/vue.js"></script>

@@ -36,12 +36,16 @@ body {
     display: none;
 }
 
+#app {
+
+}
+
 /*Header & Main Nav Styles*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 4em 4em 0 4em;
+    padding: 2em 4em 0 4em;
     transform: translateY(1.5em);
 }
 
@@ -64,26 +68,63 @@ nav li {
 }
 
 /*Main Section Styles*/
-main {
+.main-content {
     background-color: #f0cc5e;
+}
+
+main {
     padding: 2em 4em;
+    display: flex;
 
 }
 
 /*Side Navigation Styles*/
+aside {
+}
 
 
+/*Product Gallery Styles*/
+.product-section {
+    margin: 1em 2em;
+}
+
+.product-section.search-bar {
+
+}
+
+div.gallery {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.product-section figure {
+    margin: 1em;
+    flex: 1;
+}
 
 
-/*Main Gallery Styles*/
 figure {
-    width: 20%;
+    width: 12em;
+    margin: 0;
 }
 
 figcaption.product-caption {
     display: none;
 }
 
+/*Footer Styles*/
+footer {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+footer li {
+   padding: 1em;
+}
 
 /*Cart Styles*/
 
