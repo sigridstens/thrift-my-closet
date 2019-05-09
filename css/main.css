@@ -75,11 +75,13 @@ nav li {
 main {
     padding: 2em 4em;
     display: flex;
-
 }
 
 /*Side Navigation Styles*/
-aside {
+aside.main-categories {
+    list-style: none;
+    padding: 0;
+    position: sticky;
 }
 
 
@@ -97,7 +99,7 @@ div.gallery {
     flex-flow: row wrap;
 }
 
-.product-section figure {
+.gallery figure {
     margin: 1em;
     flex: 1;
 }
