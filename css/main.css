@@ -78,7 +78,7 @@ main {
 }
 
 /*Side Navigation Styles*/
-aside.main-categories {
+aside.sidebar ul {
     list-style: none;
     padding: 0;
     position: sticky;
@@ -90,8 +90,24 @@ aside.main-categories {
     margin: 1em 2em;
 }
 
-.product-section.search-bar {
+section.search-bar {
+    margin: 1em;
+    position: relative;
+}
 
+section.search-bar input {
+    width: 30em;
+    height: 3em;
+    border: 3px #db6b28 solid;
+    padding: .75em .75em .75em 2.5em;
+    font-size: .9em;
+}
+
+.search-icon {
+    position: absolute;
+    left: .75em;
+    top: .9em;
+    color: #db6b28;
 }
 
 div.gallery {

@@ -64,9 +64,12 @@
 
                     <section class="product-section">
                         <section class="search-bar">
-                            <form>
-                                <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="&#xf002; Search..." v-on:keydown="search"/>
-                            </form>
+                            <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="Search..." v-on:keydown="search"/>
+
+                            <span class="search-icon">
+                                <i class="fas fa-search "></i>
+                            </span>
+
                         </section>
 
                         <div class="gallery" v-if="searchResults.length <=0">
