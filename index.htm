@@ -16,7 +16,7 @@
                         <li>Why Thrift</li>
                         <li>
                             <i class="fas fa-shopping-cart"></i>
-                            (0)
+                            (<span>{{numInCart}}</span>)
                         </li>
                     </ul>
                 </nav>
@@ -26,37 +26,37 @@
                 <main>
                     <aside class="sidebar">
                         <ul class="main-categories">
-                            <li> Tops <span v-on:click="openSubNav">–</span>
-                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
-                                    <li>Tees & Tanks</li>
-                                    <li>Tops & Shirts</li>
-                                    <li>Sweaters</li>
-                                    <li>Sweatshirts</li>
+                            <li> <span v-on:click="toggleSubNav('topsCategory')">Tops +</span>
+                                <ul id="topsCategory" class="navClosed">
+                                    <li v-on:click="search('teestanks')">Tees & Tanks</li>
+                                    <li v-on:click="search('shirts')">Shirts</li>
+                                    <li v-on:click="search('sweaters')">Sweaters</li>
+                                    <li v-on:click="search('sweatshirts')">Sweatshirts</li>
                                 </ul>
                             </li>
-                            <li> Bottoms <span v-on:click="openSubNav">–</span>
-                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
-                                    <li>Jeans</li>
-                                    <li>Pants</li>
-                                    <li>Skirts</li>
-                                    <li>Shorts</li>
+                            <li> <span v-on:click="toggleSubNav('bottomsCategory')">Bottoms +</span>
+                                <ul id="bottomsCategory" class="navClosed" >
+                                    <li v-on:click="search('jeans')">Jeans</li>
+                                    <li v-on:click="search('pants')">Pants</li>
+                                    <li v-on:click="search('skirts')">Skirts</li>
+                                    <li v-on:click="search('shorts')">Shorts</li>
+                                </ul>
+                            </>
+                            <li> <span v-on:click="toggleSubNav('accessoriesCategory')">Accessories +</span>
+                                <ul id="accessoriesCategory"  class="navClosed">
+                                    <li v-on:click="search('scarves')">Scarves & Bandanas</li>
+                                    <li v-on:click="search('jewelry')">Jewelry</li>
+                                    <li v-on:click="search('hats')">Hats</li>
+                                    <li v-on:click="search('bags')">Bags</li>
                                 </ul>
                             </li>
-                            <li> Accessories <span v-on:click="openSubNav">–</span>
-                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
-                                    <li>Scarves & Bandanas</li>
-                                    <li>Jewelry</li>
-                                    <li>Hats</li>
-                                    <li>Bags</li>
-                                </ul>
-                            </li>
-                            <li> Shoes <span v-on:click="openSubNav">–</span>
-                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
-                                    <li>Sandals</li>
-                                    <li>Flats & Slides</li>
-                                    <li>Heels</li>
-                                    <li>Sneakers</li>
-                                    <li>Boots</li>
+                            <li> <span v-on:click="toggleSubNav('shoesCategory')">Shoes +</span>
+                                <ul id="shoesCategory" class="navClosed">
+                                    <li v-on:click="search('sandals')">Sandals</li>
+                                    <li v-on:click="search('flatsslides')">Flats & Slides</li>
+                                    <li v-on:click="search('heels')">Heels</li>
+                                    <li v-on:click="search('sneakers')">Sneakers</li>
+                                    <li v-on:click="search('boots')">Boots</li>
                                 </ul>
                             </li>
                         </ul>
@@ -64,7 +64,7 @@
 
                     <section class="product-section">
                         <section class="search-bar">
-                            <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="Search..." v-on:keydown="search"/>
+                            <input type="text" id="searchInput" class="fontAwesome" v-model="searchInput" placeholder="Search..." v-on:keydown="search('')"/>
 
                             <span class="search-icon">
                                 <i class="fas fa-search "></i>

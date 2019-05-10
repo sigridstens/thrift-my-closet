@@ -17,9 +17,9 @@ Vue.component ('inventory-component', {
             <figcaption class="product-caption">           
                 <ul>
                     <li>{{product.name}}</li>
-                    <li>{{product.color}}</li>
-                    <li>{{product.size}}</li>
-                    <li>{{product.price}}</li>
+                    <li>color: {{product.color}}</li>
+                    <li>size: {{product.size}}</li>
+                    <li>$ {{product.price}}</li>
                 </ul>
             </figcaption> 
         </figure>
@@ -52,6 +52,7 @@ new Vue ({
         selectedCategory: "",
         searchResults: [],
         isOpen: false,
+        numInCart: "",
 
         inventory: [
             {
@@ -84,7 +85,7 @@ new Vue ({
                 imgRoute: "img/levishorts.jpg",
                 id: 3,
                 category: "",
-                subcategory: "",
+                subcategory: "jeans",
                 inCart: false
             },
             {
@@ -124,32 +125,43 @@ new Vue ({
 
     },
     methods: {
-        search: function() {
+        search: function (category) {
+            //
+            var input;
+
+            if (category) {
+                input = category;
+            } else {
+                input = this.searchInput;
+            }
+
+
             //Get searchResults array
             this.searchResults = [];
 
             //Check if input is valid
-            if (this.searchInput && this.searchInput.length < 3) {
-               return;
-           }
-            this.searchInput = this.searchInput.toLowerCase();
+            if (input && input.length < 3) {
+                return;
+            }
+            input = input.toLowerCase();
 
             //Loop through inventory to match searchInput
             for (var i = 0; i < this.inventory.length; i++) {
                 var item = this.inventory[i];
-                if (item.subcategory.indexOf(this.searchInput) > -1 ||
-                    item.category.indexOf(this.searchInput) > -1 ||
-                    item.name.indexOf(this.searchInput) > -1) {
+                if (item.subcategory.indexOf(input) > -1 ||
+                    item.category.indexOf(input) > -1 ||
+                    item.name.indexOf(input) > -1) {
                     //Item matches searchInput, add to searchResults
                     this.searchResults.push(item);
                 }
             }
         },
 
-        openSubNav: function() {
-            this.isOpen = !this.isOpen;
+        toggleSubNav: function (category) {
+            var subNavList = document.getElementById(category);
 
-            }
+            subNavList.classList.toggle("navOpen")
         }
+    }
 
 })
