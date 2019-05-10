@@ -13,6 +13,7 @@ white: #fff
 /* Box-sizing: Border-box source: https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
 html {
     box-sizing: border-box;
+    height: 100vh;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -30,10 +31,6 @@ body {
 
 .fontAwesome {
     font-family: 'Open Sans', 'FontAwesome', sans-serif;
-}
-
-.subnav {
-    display: none;
 }
 
 #app {
@@ -61,6 +58,7 @@ nav ul {
     list-style: none;
     display: flex;
     margin: 1.15em;
+    color: #3d4d71;
 }
 
 nav li {
@@ -70,6 +68,7 @@ nav li {
 /*Main Section Styles*/
 .main-content {
     background-color: #f0cc5e;
+    min-height: 82vh;
 }
 
 main {
@@ -78,12 +77,44 @@ main {
 }
 
 /*Side Navigation Styles*/
+aside.sidebar {
+    margin-top: 6em;
+    width: 20%;
+    color: #3d4d71;
+}
+
 aside.sidebar ul {
     list-style: none;
     padding: 0;
     position: sticky;
+    margin: 0;
+    font-weight: bold;
 }
 
+aside.sidebar li {
+    padding: .25em 0;
+}
+
+aside.sidebar li:hover {
+      color: #db6b28;
+}
+
+.navClosed {
+    display: none;
+}
+
+.navOpen {
+    display: block;
+}
+
+aside.sidebar ul ul li {
+    padding: .15em 0 .15em 1em;
+    color: #3d4d71;
+}
+
+aside.sidebar ul ul li:hover {
+    color: #db6b28;
+}
 
 /*Product Gallery Styles*/
 .product-section {
@@ -120,7 +151,6 @@ div.gallery {
     flex: 1;
 }
 
-
 figure {
     width: 12em;
     margin: 0;
@@ -138,6 +168,7 @@ footer {
 footer ul {
     list-style: none;
     display: flex;
+    color: #3d4d71;
 }
 
 footer li {

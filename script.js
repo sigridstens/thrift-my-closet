@@ -9,7 +9,6 @@
 //});
 
 
-
 Vue.component ('inventory-component', {
     props: ['product'],
     template: `
@@ -52,7 +51,7 @@ new Vue ({
         searchInput: "",
         selectedCategory: "",
         searchResults: [],
-        shoppingCart: [],
+        isOpen: false,
 
         inventory: [
             {
@@ -145,9 +144,12 @@ new Vue ({
                     this.searchResults.push(item);
                 }
             }
+        },
 
-            //
+        openSubNav: function() {
+            this.isOpen = !this.isOpen;
 
+            }
         }
-    }
+
 })

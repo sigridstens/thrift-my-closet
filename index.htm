@@ -26,32 +26,32 @@
                 <main>
                     <aside class="sidebar">
                         <ul class="main-categories">
-                            <li> Tops <span class="sub-nav-icon">-</span>
-                                <ul class="subnav">
+                            <li> Tops <span v-on:click="openSubNav">–</span>
+                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
                                     <li>Tees & Tanks</li>
                                     <li>Tops & Shirts</li>
                                     <li>Sweaters</li>
                                     <li>Sweatshirts</li>
                                 </ul>
                             </li>
-                            <li> Bottoms <span class="sub-nav-icon">-</span>
-                                <ul class="subnav">
+                            <li> Bottoms <span v-on:click="openSubNav">–</span>
+                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
                                     <li>Jeans</li>
                                     <li>Pants</li>
                                     <li>Skirts</li>
                                     <li>Shorts</li>
                                 </ul>
                             </li>
-                            <li> Accessories <span class="sub-nav-icon">-</span>
-                                <ul class="subnav">
+                            <li> Accessories <span v-on:click="openSubNav">–</span>
+                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
                                     <li>Scarves & Bandanas</li>
                                     <li>Jewelry</li>
                                     <li>Hats</li>
                                     <li>Bags</li>
                                 </ul>
                             </li>
-                            <li> Shoes <span class="sub-nav-icon">-</span>
-                                <ul class="subnav">
+                            <li> Shoes <span v-on:click="openSubNav">–</span>
+                                <ul class="navClosed" v-bind:class="{navOpen: isOpen}">
                                     <li>Sandals</li>
                                     <li>Flats & Slides</li>
                                     <li>Heels</li>
