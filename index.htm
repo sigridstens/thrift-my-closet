@@ -16,7 +16,7 @@
                         <li>Why Thrift</li>
                         <li>
                             <i class="fas fa-shopping-cart"></i>
-                            (<span>{{numInCart}}</span>)
+                            (<span>{{ cart.length }}</span>)
                         </li>
                     </ul>
                 </nav>
@@ -73,11 +73,12 @@
                         </section>
 
                         <div class="gallery" v-if="searchResults.length <=0">
-                            <inventory-component is="inventory-component" v-for="product in inventory" v-bind:key="product.id" v-bind:product="product"></inventory-component>
+                            <inventory-component is="inventory-component" v-for="product in inventory" v-bind:key="product.id" v-bind:product="product"
+                              v-on:add-to-cart="addToCart"></inventory-component>
                         </div>
 
                         <div class="gallery" v-else="searchResults.length > 0">
-                            <inventory-component is="inventory-component" v-for="product in searchResults" v-bind:key="product.id" v-bind:product="product"></inventory-component>
+                            <inventory-component is="inventory-component" v-for="product in searchResults" v-bind:key="product.id" v-bind:product="product" v-bind:cart="cart"></inventory-component>
                         </div>
                     </section>
 

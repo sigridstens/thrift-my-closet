@@ -10,7 +10,7 @@
 
 
 Vue.component ('inventory-component', {
-    props: ['product'],
+    props: ['product', 'cart'],
     template: `
         <figure>
             <img class="gallery-tile" v-bind:src="product.imgRoute" v-bind:alt="product.name">
@@ -21,11 +21,12 @@ Vue.component ('inventory-component', {
                     <li>size: {{product.size}}</li>
                     <li>$ {{product.price}}</li>
                 </ul>
+                <button type="button" v-on:click="$emit('add-to-cart', product)">Add to cart</button>
             </figcaption> 
         </figure>
     `,
     data: function() {
-        return {inventory: []}
+        return {inventory: []};
     }
 })
 
@@ -52,7 +53,7 @@ new Vue ({
         selectedCategory: "",
         searchResults: [],
         isOpen: false,
-        numInCart: "",
+        cart: [],
 
         inventory: [
             {
@@ -126,7 +127,7 @@ new Vue ({
     },
     methods: {
         search: function (category) {
-            //
+            //Check to see if category parameter is empty or not
             var input;
 
             if (category) {
@@ -134,7 +135,6 @@ new Vue ({
             } else {
                 input = this.searchInput;
             }
-
 
             //Get searchResults array
             this.searchResults = [];
@@ -161,7 +161,11 @@ new Vue ({
             var subNavList = document.getElementById(category);
 
             subNavList.classList.toggle("navOpen")
+        },
+
+        addToCart: function(item) {
+            //Check if item is valid, and if so add to cart array
+            this.cart.push(item);
         }
     }
-
 })

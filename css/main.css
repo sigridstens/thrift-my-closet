@@ -143,16 +143,12 @@ section.search-bar input {
 
 div.gallery {
     display: flex;
+    flex-flow: row wrap;
 }
 
 .gallery figure {
     margin: 1em;
-    flex: 1;
-}
-
-figure {
-    width: 12em;
-    margin: 0;
+    flex-basis: 27%;
 }
 
 figcaption.product-caption ul {
