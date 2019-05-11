@@ -68,7 +68,7 @@ nav li {
 /*Main Section Styles*/
 .main-content {
     background-color: #f0cc5e;
-    min-height: 82vh;
+    min-height: 84vh;
 }
 
 main {
@@ -79,7 +79,7 @@ main {
 /*Side Navigation Styles*/
 aside.sidebar {
     margin-top: 6em;
-    width: 25%;
+    flex-basis: 20%;
     color: #3d4d71;
 }
 
@@ -116,9 +116,11 @@ aside.sidebar ul ul li:hover {
     color: #db6b28;
 }
 
+
 /*Product Gallery Styles*/
 .product-section {
     margin: 1em 2em;
+    flex-basis: 90%;
 }
 
 section.search-bar {

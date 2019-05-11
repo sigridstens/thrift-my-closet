@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="gallery" v-else="searchResults.length > 0">
-                            <inventory-component is="inventory-component" v-for="product in searchResults" v-bind:key="product.id" v-bind:product="product" v-bind:cart="cart"></inventory-component>
+                            <inventory-component is="inventory-component" v-for="product in searchResults" v-bind:key="product.id" v-bind:product="product" v-on:add-to-cart="addToCart"></inventory-component>
                         </div>
                     </section>
 

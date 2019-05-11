@@ -46,6 +46,7 @@ Vue.filter ('searchFor', function (value, searchString) {
     return result;
 })
 
+
 new Vue ({
     el: "#app",
     data: {
@@ -60,67 +61,108 @@ new Vue ({
                 name: "Levi's Jean Shorts",
                 color: "stone-wash blue",
                 size: 8,
-                price: 12.99,
+                price: 20.00,
                 imgRoute: "img/levishorts.jpg",
                 id: 1,
-                category: "",
-                subcategory: "",
-                inCart: false
+                category: "bottoms",
+                subcategory: "shorts",
+                keywords: "levis jeans shorts stone-wash blue"
+
             },
             {
-                name: "Levi's Jean Shorts",
-                color: "stone-wash blue",
-                size: 8,
-                price: 12.99,
-                imgRoute: "img/levishorts.jpg",
+                name: "Mustard Paper Bag Pants",
+                color: "golden mustard",
+                size: 4,
+                price: 30.00,
+                imgRoute: "img/mustardpants.jpg",
                 id: 2,
-                category: "",
-                subcategory: "",
-                inCart: false
+                category: "bottoms",
+                subcategory: "pants",
+                keywords: "mustard paper bag golden 4"
+
             },
             {
-                name: "Levi's Jean Shorts",
-                color: "stone-wash blue",
-                size: 8,
-                price: 12.99,
-                imgRoute: "img/levishorts.jpg",
+                name: "Levi's Jeans",
+                color: "faded blue",
+                size: 6,
+                price: 35.00,
+                imgRoute: "img/levijeans.jpg",
                 id: 3,
-                category: "",
+                category: "bottoms",
                 subcategory: "jeans",
-                inCart: false
+                keywords: "levis levi faded blue 6"
+
             },
             {
-                name: "Levi's Jean Shorts",
-                color: "stone-wash blue",
+                name: "Burgundy Wine Chinos",
+                color: "burgundy wine",
                 size: 8,
-                price: 12.99,
-                imgRoute: "img/levishorts.jpg",
+                price: 25.00,
+                imgRoute: "img/burgundypants.jpg",
                 id: 4,
-                category: "",
-                subcategory: "",
-                inCart: false
+                category: "bottoms",
+                subcategory: "pants",
+                keywords: "burgundy wine chinos 8"
+
             },
             {
-                name: "Levi's Jean Shorts",
-                color: "stone-wash blue",
-                size: 8,
-                price: 12.99,
-                imgRoute: "img/levishorts.jpg",
+                name: "Burnt Terracotta Corduroy Pants",
+                color: "terracotta orange",
+                size: 4,
+                price: 30.00,
+                imgRoute: "img/burntorangecords.jpg",
                 id: 5,
-                category: "",
-                subcategory: "",
-                inCart: false
+                category: "bottoms",
+                subcategory: "pants",
+                keywords: "burnt terracotta corduroy pants orange 4"
+
             },
             {
-                name: "Levi's Jean Shorts",
-                color: "stone-wash blue",
-                size: 8,
-                price: 12.99,
-                imgRoute: "img/levishorts.jpg",
+                name: "Color Block Patched Jeans",
+                color: "black and grey",
+                size: 6,
+                price: 25.00,
+                imgRoute: "img/blackandgreypants.jpg",
                 id: 6,
-                category: "blue",
-                subcategory: "",
-                inCart: false
+                category: "bottoms",
+                subcategory: "jeans",
+                keywords: "color block patched jeans black grey 6"
+
+            },
+            {
+                name: "Pink Party Pants",
+                color: "blush pink",
+                size: 8,
+                price: 35.00,
+                imgRoute: "img/pink-pants.jpg",
+                id: 6,
+                category: "bottoms",
+                subcategory: "pants",
+                keywords: "pink party pants blush 8"
+
+            },
+            {
+                name: "Blue Denim Jeans",
+                color: "faded ocean blue",
+                size: 6,
+                price: 30.00,
+                imgRoute: "img/bluejeans.jpg",
+                id: 6,
+                category: "bottoms",
+                subcategory: "jeans",
+                keywords: "blue denim jeans faded ocean 6"
+
+            },
+            {
+                name: "Black Silk Pants",
+                color: "ink black",
+                size: 8,
+                price: 35.00,
+                imgRoute: "img/silkpants.jpg",
+                id: 6,
+                category: "bottoms",
+                subcategory: "pants",
+                keywords: "black silk pants ink 8"
             },
         ]
 
@@ -150,7 +192,7 @@ new Vue ({
                 var item = this.inventory[i];
                 if (item.subcategory.indexOf(input) > -1 ||
                     item.category.indexOf(input) > -1 ||
-                    item.name.indexOf(input) > -1) {
+                    item.keywords.indexOf(input) > -1) {
                     //Item matches searchInput, add to searchResults
                     this.searchResults.push(item);
                 }
