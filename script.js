@@ -16,10 +16,12 @@ Vue.component ('inventory-component', {
             <img class="gallery-tile" v-bind:src="product.imgRoute" v-bind:alt="product.name">
             <figcaption class="product-caption">           
                 <ul>
-                    <li>{{product.name}}</li>
-                    <li>color: {{product.color}}</li>
-                    <li>size: {{product.size}}</li>
-                    <li>$ {{product.price}}</li>
+                    <li class="product-name">{{product.name}}</li>
+                    <li class="product-color">
+                        color: {{product.color}}</li>
+                    <li class="product-size">
+                        size: {{product.size}}</li>
+                    <li class="product-price">$ {{product.price}}</li>
                 </ul>
                 <button type="button" v-on:click="$emit('add-to-cart', product)">Add to cart</button>
             </figcaption> 
@@ -135,7 +137,7 @@ new Vue ({
                 size: 8,
                 price: 35.00,
                 imgRoute: "img/pink-pants.jpg",
-                id: 6,
+                id: 7,
                 category: "bottoms",
                 subcategory: "pants",
                 keywords: "pink party pants blush 8"
@@ -147,7 +149,7 @@ new Vue ({
                 size: 6,
                 price: 30.00,
                 imgRoute: "img/bluejeans.jpg",
-                id: 6,
+                id: 8,
                 category: "bottoms",
                 subcategory: "jeans",
                 keywords: "blue denim jeans faded ocean 6"
@@ -156,10 +158,10 @@ new Vue ({
             {
                 name: "Black Silk Pants",
                 color: "ink black",
-                size: 8,
+                size: 6,
                 price: 35.00,
                 imgRoute: "img/silkpants.jpg",
-                id: 6,
+                id: 9,
                 category: "bottoms",
                 subcategory: "pants",
                 keywords: "black silk pants ink 8"

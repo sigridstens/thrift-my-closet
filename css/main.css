@@ -33,7 +33,14 @@ body {
     font-family: 'Open Sans', 'FontAwesome', sans-serif;
 }
 
-#app {
+button {
+    padding: .75em .8em;
+    background-color: #db6b28;
+    border: 3px #fff solid;
+    color: white;
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: .05em;
 
 }
 
@@ -117,7 +124,7 @@ aside.sidebar ul ul li:hover {
 }
 
 
-/*Product Gallery Styles*/
+/*Search and Product Gallery Styles*/
 .product-section {
     margin: 1em 2em;
     flex-basis: 90%;
@@ -157,7 +164,28 @@ figcaption.product-caption ul {
     list-style-type: none;
     padding: 0;
     margin: .5em;
-    font-size: .75em;
+    font-size: .8em;
+    color: #3d4d71;
+}
+
+.product-name{
+    font-size: 1.15em;
+}
+
+.product-price {
+    text-align: right;
+    transform: translateY(-3em);
+    font-size: 1.25em;
+}
+
+.product-label {
+    font-weight: 600;
+}
+
+figure button {
+    display: flex;
+    margin: 0 auto 1.5em auto;
+    transform: translateY(-1.5em);
 }
 
 /*Footer Styles*/
